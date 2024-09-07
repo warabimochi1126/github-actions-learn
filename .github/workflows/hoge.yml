@@ -32,3 +32,11 @@ jobs:
 
       - name: "ここがjobの名前になるっぽいな"
         run: echo "jobの名前になる"
+  super_hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "全部挨拶になるか"
+        run: |
+          echo "挨拶1"
+          echo "挨拶2"
+          echo "挨拶3"

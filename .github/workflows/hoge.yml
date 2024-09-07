@@ -21,3 +21,10 @@ jobs:
       - run: curl http://example.com
       - run: node -v
       - run: npx -v
+  super_names_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "挨拶"
+        run: echo "こんにちは"
+      - name: "名前を言う"
+        run: echo "私の名前はwarabimochiです"

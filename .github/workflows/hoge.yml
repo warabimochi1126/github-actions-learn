@@ -26,5 +26,9 @@ jobs:
     steps:
       - name: "挨拶"
         run: echo "こんにちは"
+
       - name: "名前を言う"
         run: echo "私の名前はwarabimochiです"
+
+      - name: "ここがjobの名前になるっぽいな"
+        run: echo "jobの名前になる"

@@ -15,3 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl http://example.com
+  super_multiple_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl http://example.com
+      - run: node -v
+      - run: npx -v

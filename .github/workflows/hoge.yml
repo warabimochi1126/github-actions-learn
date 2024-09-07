@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: ls
-  super_node_job:
-    runs-on: node
+  super_curl_job:
+    runs-on: ubuntu-latest
     steps:
       - run: node -v

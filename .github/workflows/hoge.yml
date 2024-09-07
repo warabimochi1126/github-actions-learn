@@ -14,4 +14,4 @@ jobs:
   super_curl_job:
     runs-on: ubuntu-latest
     steps:
-      - run: node -v
+      - run: curl http://example.com

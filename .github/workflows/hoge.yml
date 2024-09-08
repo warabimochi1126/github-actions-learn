@@ -1,7 +1,6 @@
 name: GitHub Actions Demo
 
-on:
-  workflow_dispatch:
+on: ["push"]
 
 jobs:
   check_pr_title:

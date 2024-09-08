@@ -1,20 +1,13 @@
 name: GitHub Actions Demo
 
-on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
   echo_hello_world:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello world!!"
-  super_test_job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: ls
-  super_curl_job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl http://example.com
   super_multiple_job:
     runs-on: ubuntu-latest
     steps:

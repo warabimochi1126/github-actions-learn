@@ -4,32 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  echo_hello_world:
+  check_pr_title:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello world!!"
-  super_multiple_job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl http://example.com
-      - run: node -v
-      - run: npx -v
-  super_names_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "挨拶"
-        run: echo "こんにちは"
+      - name: リポジトリを取得する
+        uses: actions/checkout@v4
 
-      - name: "名前を言う"
-        run: echo "私の名前はwarabimochiです"
+      - name: モジュールのインストール
+        run: npm install
 
-      - name: "ここがjobの名前になるっぽいな"
-        run: echo "jobの名前になる"
-  super_hello_world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "全部挨拶になるか"
-        run: |
-          echo "挨拶1"
-          echo "挨拶2"
-          echo "挨拶3"
+      - name: danger JSの実行
+        run: node ./dangerfile.js

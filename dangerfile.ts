@@ -1,3 +1,3 @@
-import { message } from "danger";
+import { fail } from "danger";
 
-message("テストメッセージ");
+fail("test message");

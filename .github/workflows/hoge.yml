@@ -15,4 +15,4 @@ jobs:
         run: npm install
 
       - name: danger JSの実行
-        run: npm run ./dangerfile.mjs
+        run: node run ./dangerfile.mjs

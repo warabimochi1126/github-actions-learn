@@ -11,8 +11,8 @@ jobs:
       - name: リポジトリを取得する
         uses: actions/checkout@v4
 
-      - name: モジュールのインストール
-        run: npm install
-
       - name: danger JSの実行
-        run: node run ./dangerfile.mjs
+        uses: danger/danger-js@11.0.2 #TODO:npmみたいなバージョンを指定できるのがどこにあるのか不明,最新にしたいがmarketplaceでは良く分からなかった
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DANGER_DISABLE_TRANSPILATION: true

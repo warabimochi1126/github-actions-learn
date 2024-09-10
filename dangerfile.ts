@@ -7,10 +7,9 @@ function checkPRTitle() {
   console.log(prTitle);
 
   const regex = /^(feat|fix|docs|refactor|test|ci)\([^)]+\):\s*.+/i;
-  if (prTitle.match(regex)) {
+  if (!regex.test(prTitle)) {
     fail("PRタイトルがConventional Commitsに準拠していません。");
   }
-  fail("絶対落とす");
 }
 
 checkPRTitle();

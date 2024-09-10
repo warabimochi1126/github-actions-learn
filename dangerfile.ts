@@ -4,8 +4,10 @@ import { danger, fail } from "danger";
 function checkPRTitle() {
   const prTitle = danger.github.pr.title;
 
+  console.log(prTitle);
+
   const regex = /^(feat|fix|docs|refactor|test|ci)\([^)]+\):\s*.+/i;
-  if (prTitle.match(regex)) {
+  if (!regex.test(prTitle)) {
     fail("PRタイトルがConventional Commitsに準拠していません。");
   }
 }
